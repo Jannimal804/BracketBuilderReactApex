@@ -32,28 +32,28 @@ class SideMenuContent extends Component {
    render() {
       return (
          <SideMenu className="sidebar-content" toggleSidebarMenu={this.props.toggleSidebarMenu}>
-            <SideMenu.MenuMultiItems
-               name="Dashboard"
-               Icon={<Home size={18} />}
-               ArrowRight={<ChevronRight size={16} />}
-               collapsedSidebar={this.props.collapsedSidebar}
-            >
-               <NavLink to="/" exact className="item" activeclassname="active">
-                  <span className="menu-item-text">eCommerce</span>
+            <SideMenu.MenuSingleItem badgeColor="info">
+               <NavLink to="/" activeclassname="active">
+                  <i className="menu-icon">
+                     <Users size={18} />
+                  </i>
+                  <span className="menu-item-text">Competitors</span>
                </NavLink>
-               <NavLink to="/analytics-dashboard" exact className="item" activeclassname="active">
-                  <span className="menu-item-text">Analytics</span>
-               </NavLink>
-               <NavLink to="/sales-dashboard" exact className="item" activeclassname="active">
-                  <span className="menu-item-text">Sales</span>
-               </NavLink>
-            </SideMenu.MenuMultiItems>
+            </SideMenu.MenuSingleItem>
             <SideMenu.MenuSingleItem badgeColor="danger">
                <NavLink to="/gyms" activeclassname="active">
                   <i className="menu-icon">
                      <Map size={18} />
                   </i>
                   <span className="menu-item-text">BJJ Gyms Nearby</span>
+               </NavLink>
+            </SideMenu.MenuSingleItem>
+            <SideMenu.MenuSingleItem>
+               <NavLink to="/calendar" activeclassname="active">
+                  <i className="menu-icon">
+                     <Calendar size={18} />
+                  </i>
+                  <span className="menu-item-text">Upcoming Events</span>
                </NavLink>
             </SideMenu.MenuSingleItem>
             <SideMenu.MenuSingleItem>
@@ -80,15 +80,7 @@ class SideMenuContent extends Component {
                   <span className="menu-item-text">Todo</span>
                </NavLink>
             </SideMenu.MenuSingleItem>
-            <SideMenu.MenuSingleItem>
-               <NavLink to="/calendar" activeclassname="active">
-                  <i className="menu-icon">
-                     <Calendar size={18} />
-                  </i>
-                  <span className="menu-item-text">Calender</span>
-               </NavLink>
-            </SideMenu.MenuSingleItem>
-
+            
             <SideMenu.MenuMultiItems
                name="Pages"
                Icon={<Copy size={18} />}

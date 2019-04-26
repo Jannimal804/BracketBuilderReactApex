@@ -139,11 +139,8 @@ class Calender extends Component {
                <Col xs="12">
                   <div className="content-header">Calendar</div>
                   <p className="content-sub-header">
-                     <a href="https://github.com/intljusticemission/react-big-calendar" target="_blank" rel="noopener noreferrer">React Big Calendar</a> is gcal/outlook like calendar component. This is the most advanced example having various features.
-                     This example lists all the events on the calendar with Add new event functionality.
-                     <a href="https://github.com/intljusticemission/react-big-calendar" target="_blank" rel="noopener noreferrer">
-                        <img src="https://img.shields.io/github/stars/intljusticemission/react-big-calendar.svg?style=social" alt="Stars" />
-                        <img src="https://img.shields.io/npm/dm/react-big-calendar.svg" alt="Downloads"/>
+                     <a>
+                        Add or view upcoing BJJ events!
                      </a>
                   </p>
                </Col>
