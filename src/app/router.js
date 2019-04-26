@@ -12,7 +12,7 @@ import ErrorLayoutRoute from "../layouts/routes/errorRoutes";
 const LazyEcommerceDashboard = lazy(() => import("../views/dashboard/ecommerceDashboard"));
 const LazyAnalyticsDashboard = lazy(() => import("../views/dashboard/analyticsDashboard"));
 const LazySalesDashboard = lazy(() => import("../views/dashboard/salesDashboard"));
-const LazyEmail = lazy(() => import("../views/email/email"));
+// const LazyEmail = lazy(() => import("../views/email/email"));
 const LazyChat = lazy(() => import("../views/chat/chat"));
 const LazyContacts = lazy(() => import("../views/contacts/contacts"));
 const LazyTodo = lazy(() => import("../views/todo/todo"));
@@ -77,6 +77,7 @@ const LazyKnowledgeBase = lazy(() => import("../views/pages/knowledgeBase"));
 const LazySearch = lazy(() => import("../views/pages/search"));
 const LazyBlankPage = lazy(() => import("../views/pages/blankPage"));
 const LazyChangeLogPage = lazy(() => import("../views/pages/changeLogPage"));
+const LazyGyms = lazy(() => import("../components/GoogleMaps"))
 
 // Full Layout
 const LazyForgotPassword = lazy(() => import("../views/pages/forgotPassword"));
@@ -134,10 +135,10 @@ class Router extends Component {
                />
                <MainLayoutRoutes
                   exact
-                  path="/email"
+                  path="/gyms"
                   render={matchprops => (
                      <Suspense fallback={<Spinner />}>
-                        <LazyEmail {...matchprops} />
+                        <LazyGyms {...matchprops} />
                      </Suspense>
                   )}
                />

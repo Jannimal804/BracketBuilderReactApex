@@ -48,12 +48,12 @@ class SideMenuContent extends Component {
                   <span className="menu-item-text">Sales</span>
                </NavLink>
             </SideMenu.MenuMultiItems>
-            <SideMenu.MenuSingleItem badgeColor="danger" badgeText="6">
-               <NavLink to="/email" activeclassname="active">
+            <SideMenu.MenuSingleItem badgeColor="danger">
+               <NavLink to="/gyms" activeclassname="active">
                   <i className="menu-icon">
-                     <Mail size={18} />
+                     <Map size={18} />
                   </i>
-                  <span className="menu-item-text">Email</span>
+                  <span className="menu-item-text">BJJ Gyms Nearby</span>
                </NavLink>
             </SideMenu.MenuSingleItem>
             <SideMenu.MenuSingleItem>
