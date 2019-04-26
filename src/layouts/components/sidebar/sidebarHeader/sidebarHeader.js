@@ -33,16 +33,16 @@ class SidebarHeader extends Component {
                               <img src={Logo} alt="logo" />
                            )}                           
                         </div>
-                        <span className="text align-middle">BRACKET BUILDER</span>
+                        {/* <span className="text align-middle">BRACKET BUILDER</span> */}
                      </NavLink>
 
-                     <span className="nav-toggle d-none d-sm-none d-md-none d-lg-block">
+                     {/* <span className="nav-toggle d-none d-sm-none d-md-none d-lg-block">
                         {context.foldedContent ? (
                            <ToggleLeft onClick={context.makeNormalContent} className="toggle-icon" size={16} />
                         ) : (
                            <ToggleRight onClick={context.makeFullContent} className="toggle-icon" size={16} />
                         )}
-                     </span>
+                     </span> */}
                      <span href="" className="nav-close d-block d-md-block d-lg-none d-xl-none" id="sidebarClose">
                         <X onClick={this.handleClick} size={20} />
                      </span>

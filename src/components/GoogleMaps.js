@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Map from "./Map";
 import InfoWindow from "./InfoWindow";
 import API from "../utility/API";
+import { FormGroup, Label, Input, Col, Button, Row } from "reactstrap";
 
 class GoogleMap extends Component {
 
@@ -53,9 +54,18 @@ class GoogleMap extends Component {
     render() {
         return (
             <div>
+                {/* <Row>
+                    <Col xl="4" lg="6" md="12">
+                        <FormGroup>
+                            <Label for="pinput">Enter a zipcode to find gyms near you!</Label>
+                            <Input type="text" id="pinput" name="pinput" placeholder="Enter Zipcode" />
+                            <Button className="gradient-nepal" >Search</Button>{" "}
+                        </FormGroup>
+                    </Col>
+                </Row> */}
                 <form>
                     <label>Enter a zipcode to find gyms near you!
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit" onClick={this.handleSubmit} />
                 </form>

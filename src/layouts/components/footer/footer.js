@@ -20,18 +20,13 @@ const Footer = props => (
       )}
       <div className="container-fluid">
          <p className="text-center">
-            © 2018{" "}
+            © 2019{" "}
             <a
-               href="https://pixinvent.com/demo/apex-react-redux-bootstrap-admin-dashboard-template/landing-page/"
+               href="https://github.com/Jannimal804/BracketBuilderReactApex"
                rel="noopener noreferrer"
                target="_blank"
             >
-               Apex - React{" "}
-            </a>
-            Crafted by <i className="ft-heart font-small-3" />            
-            <a href="https://pixinvent.com/" rel="noopener noreferrer" target="_blank">
-               {" "}
-               PIXINVENT
+               Bracket Builder{" "}
             </a>
          </p>
       </div>
