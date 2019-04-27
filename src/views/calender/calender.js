@@ -140,7 +140,7 @@ class Calender extends Component {
                   <div className="content-header">Calendar</div>
                   <p className="content-sub-header">
                      <a>
-                        Add or view upcoing BJJ events!
+                        Add or view upcoing Brazilian Jiu-Jitsu events!
                      </a>
                   </p>
                </Col>

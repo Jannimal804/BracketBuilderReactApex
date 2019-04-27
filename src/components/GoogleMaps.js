@@ -39,14 +39,22 @@ class GoogleMap extends Component {
     }
 
     // Creates the info window element
-    createInfoWindow(e, map, marker) {
+    createInfoWindow(e, map, results, thisComponent) {
         const infoWindow = new window.google.maps.InfoWindow({
             content: '<div id="infoWindow" />',
             position: { lat: e.latLng.lat(), lng: e.latLng.lng() }
         })
         infoWindow.addListener('domready', e => {
+            var name;
+            var address;
+            for (var i = 0; i < results.length; i++) {
+                if (thisComponent.position.lat() === results[i].geometry.location.lat()) {
+                    name = results[i].name
+                    address = results[i].formatted_address
+                }
+            }
             render(<InfoWindow />, document.getElementById('infoWindow'))
-            infoWindow.setContent();
+            infoWindow.setContent(name + "</br>" + address);
         })
         infoWindow.open(map)
     }
@@ -100,6 +108,7 @@ class GoogleMap extends Component {
                                                 origin: new window.google.maps.Point(0, 0),
                                                 anchor: new window.google.maps.Point(0, 32)
                                             }
+                                            // Creates the markers on the map
                                             const marker = new window.google.maps.Marker({
                                                 position: { lat: lat, lng: lng },
                                                 map: map,
