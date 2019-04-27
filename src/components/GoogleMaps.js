@@ -39,12 +39,14 @@ class GoogleMap extends Component {
     }
 
     // Creates the info window element
-    createInfoWindow(e, map, marker) {
+    createInfoWindow(e, map, results) {
         const infoWindow = new window.google.maps.InfoWindow({
             content: '<div id="infoWindow" />',
             position: { lat: e.latLng.lat(), lng: e.latLng.lng() }
         })
         infoWindow.addListener('domready', e => {
+            console.log(map)
+            console.log(results)
             render(<InfoWindow />, document.getElementById('infoWindow'))
             infoWindow.setContent();
         })
@@ -100,6 +102,7 @@ class GoogleMap extends Component {
                                                 origin: new window.google.maps.Point(0, 0),
                                                 anchor: new window.google.maps.Point(0, 32)
                                             }
+                                            // Creates the markers on the map
                                             const marker = new window.google.maps.Marker({
                                                 position: { lat: lat, lng: lng },
                                                 map: map,
@@ -107,6 +110,7 @@ class GoogleMap extends Component {
                                             });
                                             // When a marker is clicked an info window pops up
                                             marker.addListener('click', e => {
+                                                console.log(this)
                                                 thisComponent.createInfoWindow(e, map, results, marker)
                                             })
                                         }
