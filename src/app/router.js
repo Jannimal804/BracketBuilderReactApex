@@ -9,8 +9,8 @@ import FullPageLayout from "../layouts/routes/fullpageRoutes";
 import ErrorLayoutRoute from "../layouts/routes/errorRoutes";
 
 const LazyCalender = lazy(() => import("../views/calender/calender"));
-const LazyGyms = lazy(() => import("../components/GoogleMaps"))
-
+const LazyGyms = lazy(() => import("../components/GoogleMaps"));
+const LazyCompetitor = lazy(() => import("../views/pages/competitorpage"));
 // Error Pages
 const LazyErrorPage = lazy(() => import("../views/pages/error"));
 
@@ -30,6 +30,15 @@ class Router extends Component {
                       </Suspense>
                    )}
                 />
+                <MainLayoutRoutes
+                  exact
+                  path="/competitors"
+                  render={matchprops => (
+                     <Suspense fallback={<Spinner />}>
+                        <LazyCompetitor {...matchprops} />
+                     </Suspense>
+                  )}
+               />
                 <MainLayoutRoutes
                   exact
                   path="/gyms"

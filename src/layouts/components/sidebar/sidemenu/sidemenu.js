@@ -33,7 +33,7 @@ class SideMenuContent extends Component {
       return (
          <SideMenu className="sidebar-content" toggleSidebarMenu={this.props.toggleSidebarMenu}>
             <SideMenu.MenuSingleItem badgeColor="info">
-               <NavLink to="/" activeclassname="active">
+               <NavLink to="/competitors" activeclassname="active">
                   <i className="menu-icon">
                      <Users size={18} />
                   </i>
