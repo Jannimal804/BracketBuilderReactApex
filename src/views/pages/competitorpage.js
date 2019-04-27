@@ -106,6 +106,7 @@ render() {
       <Row>
       <div className= "list-group col-6">
       <div>
+         <Col slg="4" className="align-self-left">
             <h1><b>Competitor Data:</b></h1>
             <ListGroup>
             <ListGroupItem>Black Belt</ListGroupItem>
@@ -115,8 +116,9 @@ render() {
                <ListGroupItem>IBJJF World Champion (2018/2017/2016/2015)</ListGroupItem>
                <ListGroupItem>IBJJF Asian Championship 2nd Place (2015)</ListGroupItem>
             </ListGroup>
+            </Col>
 
-            <Col slg="6" className= "align-self-right">
+            <Col slg="4" className= "align-self-right">
                   <ProjectStatsDonutChartCard
                      projectStatsDonutChartData={AdvancedCardData.ProjectStatsDonutChartData}
                      cardTitle="Submission Stats"
@@ -127,16 +129,16 @@ render() {
          </div>
       </div>
       </Row>
-      <h1>Upcoming Events:</h1>
+      <h1>Rikako's Events:</h1>
       <Row className="row-eq-height">
                <Col sm="12" md="4">
                   <Card>
                      <CardImg top width="100%" src={match1} alt="Card cap" />
                      <CardBody>
-                        <CardTitle>Card title</CardTitle>
-                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardTitle>US Grappling</CardTitle>
+                        <CardSubtitle>April 27, 2019</CardSubtitle>
                         <CardText>
-                           Some quick example text to build on the card title and make up the bulk of the card's content.
+                           Divisions for ages 4 and up. Gi and no gi divisions. 
                         </CardText>
                         <Button className="gradient-purple-bliss">Interested</Button>{" "}
                      </CardBody>
