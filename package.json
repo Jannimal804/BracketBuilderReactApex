@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^4.1.0",
+    "node-sass": "^4.12.0",
     "react-simple-storage": "^1.4.1"
   }
 }
