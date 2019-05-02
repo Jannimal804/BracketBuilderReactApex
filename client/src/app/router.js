@@ -8,9 +8,13 @@ import MainLayoutRoutes from "../layouts/routes/mainRoutes";
 import FullPageLayout from "../layouts/routes/fullpageRoutes";
 import ErrorLayoutRoute from "../layouts/routes/errorRoutes";
 
+const LazyLogin = lazy(() => import("../views/pages/login"));
 const LazyCalender = lazy(() => import("../views/calender/calender"));
 const LazyGyms = lazy(() => import("../components/GoogleMaps"));
 const LazyCompetitor = lazy(() => import("../views/pages/competitorpage"));
+const LazyDB = lazy (() => import("../components/compDatabase"));
+const LazyChat = lazy(() => import("../views/chat/chat"));
+
 // Error Pages
 const LazyErrorPage = lazy(() => import("../views/pages/error"));
 
@@ -26,7 +30,7 @@ class Router extends Component {
                    path="/"
                    render={matchprops => (
                       <Suspense fallback={<Spinner />}>
-                         {/* <LazyEcommerceDashboard {...matchprops} /> */}
+                         <LazyLogin {...matchprops} />
                       </Suspense>
                    )}
                 />
@@ -35,7 +39,7 @@ class Router extends Component {
                   path="/competitors"
                   render={matchprops => (
                      <Suspense fallback={<Spinner />}>
-                        <LazyCompetitor {...matchprops} />
+                        <LazyDB {...matchprops} />
                      </Suspense>
                   )}
                />
@@ -54,6 +58,24 @@ class Router extends Component {
                   render={matchprops => (
                      <Suspense fallback={<Spinner />}>
                         <LazyCalender {...matchprops} />
+                     </Suspense>
+                  )}
+               />
+               <MainLayoutRoutes
+                  exact
+                  path="/compprofile"
+                  render={matchprops => (
+                     <Suspense fallback={<Spinner />}>
+                        <LazyCompetitor {...matchprops} />
+                     </Suspense>
+                  )}
+               />
+               <MainLayoutRoutes
+                  exact
+                  path="/chat"
+                  render={matchprops => (
+                     <Suspense fallback={<Spinner />}>
+                        <LazyChat {...matchprops} />
                      </Suspense>
                   )}
                />
