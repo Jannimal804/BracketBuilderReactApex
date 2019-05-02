@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 app.use(logger("dev"));
 
 if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/src'));
+  app.use(express.static('client/build'));
 };
 
 app.get("/", (req, res) => {
