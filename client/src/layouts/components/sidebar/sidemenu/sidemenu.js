@@ -40,6 +40,14 @@ class SideMenuContent extends Component {
                   <span className="menu-item-text">Competitors</span>
                </NavLink>
             </SideMenu.MenuSingleItem>
+            <SideMenu.MenuSingleItem>
+               <NavLink to="/compprofile" activeclassname="active">
+                  <i className="menu-icon">
+                     <Users size={18} />
+                  </i>
+                  <span className="menu-item-text">Profile Page</span>
+               </NavLink>
+            </SideMenu.MenuSingleItem>
             <SideMenu.MenuSingleItem badgeColor="danger">
                <NavLink to="/gyms" activeclassname="active">
                   <i className="menu-icon">
@@ -54,6 +62,14 @@ class SideMenuContent extends Component {
                      <Calendar size={18} />
                   </i>
                   <span className="menu-item-text">Upcoming Events</span>
+               </NavLink>
+            </SideMenu.MenuSingleItem>
+            <SideMenu.MenuSingleItem>
+               <NavLink to="/chat" activeClassName="active">
+                  <i className="menu-icon">
+                     <MessageSquare size={18} />
+                  </i>
+                  <span className="menu-item-text">Chat</span>
                </NavLink>
             </SideMenu.MenuSingleItem>
             </SideMenu>

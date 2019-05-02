@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Map from "./Map";
 import InfoWindow from "./InfoWindow";
 import API from "../utility/API";
-import { FormGroup, Label, Input, Col, Button, Row } from "reactstrap";
+// import { FormGroup, Label, Input, Col, Button, Row } from "reactstrap";
 
 class GoogleMap extends Component {
 
@@ -13,7 +13,7 @@ class GoogleMap extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            search: "",
+            value: "",
             lat: "",
             lng: ""
         }
@@ -77,6 +77,7 @@ class GoogleMap extends Component {
                     </label>
                     <input type="submit" value="Submit" onClick={this.handleSubmit} />
                 </form>
+                {/* If we succesfully receive latitude and longitude coordinates, load the map */}
                 {this.state.lat && this.state.lng &&
                     <div>
                         <Map
