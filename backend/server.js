@@ -12,7 +12,7 @@ app.use(cors());
 const router = express.Router();
 
 // this is our MongoDB database
-const dbRoute = "mongodb://user:password1@ds149616.mlab.com:49616/heroku_67szp8rj";
+const dbRoute = "mongodb://user1:password1@ds151066.mlab.com:51066/heroku_l94m1n72";
 
 // connects our back end code with the database
 mongoose.connect(

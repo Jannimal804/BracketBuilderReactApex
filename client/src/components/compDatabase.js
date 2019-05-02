@@ -55,7 +55,6 @@ class CompDB extends Component {
   // our put method that uses our backend api
   // to create new query into our data base
   putDataToDB = (first, last, belt, weightclass) => {
-    console.log(this.state.last)
     let currentIds = this.state.data.map(data => data.id);
     let idToBeAdded = 0;
     while (currentIds.includes(idToBeAdded)) {
@@ -153,11 +152,12 @@ class CompDB extends Component {
         <Row>
           <div>
             <h3
-              style={{ marginLeft: "15px" }}>Enter your information below!</h3>
+              style={{ marginLeft: "15px" }}>Enter your information!</h3>
             <Col xl="4" lg="4" md="12">
 
               <input
                 type="text"
+                id="compinput"
                 onChange={e => this.setState({ first: e.target.value })}
                 placeholder="First Name"
                 style={{ width: "220px", marginBottom: "10px" }}
@@ -166,6 +166,7 @@ class CompDB extends Component {
             <Col xl="4" lg="4" md="12">
               <input
                 type="text"
+                id="compinput"
                 onChange={e => this.setState({ last: e.target.value })}
                 placeholder="Last Name"
                 style={{ width: "220px", marginBottom: "10px" }}
