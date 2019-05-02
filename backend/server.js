@@ -33,6 +33,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+};
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+});
+
+
 // this is our get method
 // this method fetches all available data in our database
 router.get("/getData", (req, res) => {
